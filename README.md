@@ -16,6 +16,15 @@ GurneyGate watches a hospital corridor from a camera above a door. It recognises
 relay on the door operator's activation input so the door is already open when they arrive. Supply carts
 are a separate class and are meant not to open the door (see [Limitations](#limitations)).
 
+## Why
+Doors to operating theatres, emergency departments and intensive care units are usually kept closed, for
+infection control, air pressure, noise, privacy and security, so they open with a push button, a card or a
+foot switch. A team moving a patient on a stretcher has its hands full: someone has to stop, reach for the
+button and wait for the door, often during an emergency. GurneyGate aims to remove that stop and win back
+those seconds, by opening the door early for a patient transport while keeping it closed for everyone and
+everything else. That is why a plain motion sensor, which opens for every passer-by, is not enough.
+How much time it saves at a real door has not been measured yet.
+
 > **Research prototype.** GurneyGate has not yet run above a real door. The results below come from
 > public hospital CCTV clips, stock video and simulation. It is an **activation sensor, not a safety
 > device** (ANSI/BHMA A156.10): the door keeps its own safety sensors (EN 16005 / A156.10).
