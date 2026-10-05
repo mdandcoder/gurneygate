@@ -3,7 +3,6 @@
 <p align="center"><b>The door that sees the stretcher coming.</b></p>
 
 <p align="center">
-  <a href="https://github.com/mdandcoder/gurneygate/actions/workflows/tests.yml"><img alt="tests" src="https://github.com/mdandcoder/gurneygate/actions/workflows/tests.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="License: AGPL-3.0-only" src="https://img.shields.io/badge/license-AGPL--3.0--only-blue"></a>
   <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-blue">
   <img alt="Status: research prototype" src="https://img.shields.io/badge/status-research%20prototype-orange">
