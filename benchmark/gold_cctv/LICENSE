@@ -1,0 +1,13 @@
+GurneyGate hospital CCTV benchmark: labels (labels/) and frame index (manifest.csv)
+Copyright (C) 2026 Baris Ozturk
+
+These files are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+You may share and adapt them for any purpose, provided you give appropriate credit, provide a link to
+the license, and indicate if changes were made.
+
+Attribution: "GurneyGate hospital CCTV benchmark, Baris Ozturk, 2026, https://github.com/mdandcoder/gurneygate"
+License text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The referenced YouTube videos and any frames extracted from them are not covered by this license; they
+belong to their respective owners. The code in this folder (rebuild.py) is AGPL-3.0-only, like the rest
+of the repository.

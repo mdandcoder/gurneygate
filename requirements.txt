@@ -1,0 +1,12 @@
+# YOLO26 needs Ultralytics 8.4 (tested with 8.4.152 and 8.4.157).
+ultralytics>=8.4,<8.5
+opencv-python>=4.8
+pyyaml
+numpy
+pytest
+
+# optional:
+# yt-dlp            # rebuild the benchmark frames (benchmark/gold_cctv/rebuild.py)
+# transformers>=4.49  # Grounding DINO box proposals (tools/propose_gdino.py) and the depth cue (use_depth)
+# pyserial          # serial (Arduino) relay
+# RPi.GPIO          # Raspberry Pi GPIO relay

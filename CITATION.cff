@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use GurneyGate, please cite it as below."
+title: "GurneyGate: Stretcher-Aware Door Activation for Hospital Corridors"
+type: software
+authors:
+  - family-names: Ozturk
+    given-names: Baris
+    orcid: "https://orcid.org/0009-0005-3348-0527"
+license:
+  - AGPL-3.0-only   # code and model weights
+  - CC-BY-4.0       # benchmark labels
+repository-code: "https://github.com/mdandcoder/gurneygate"
+version: "0.1.0"
+date-released: "2026-10-06"
+keywords:
+  - hospital
+  - automatic door
+  - stretcher detection
+  - object tracking
+  - YOLO

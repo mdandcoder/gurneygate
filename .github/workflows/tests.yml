@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # the decision logic, relay and evaluation code need no deep-learning stack
+      - run: pip install numpy opencv-python-headless pyyaml pytest
+      - run: python -m pytest -q tests
+      - run: python -m gurneygate.sim --headless --fps 6

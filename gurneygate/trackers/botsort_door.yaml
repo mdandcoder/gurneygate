@@ -1,0 +1,18 @@
+# BoT-SORT (Ultralytics) for GurneyGate. Differences from the default:
+# - track_high/new_track 0.30: a new track starts only on a detection above 0.30
+# - track_low 0.10: weak 0.10-0.30 detections keep existing tracks alive (second stage).
+#   For this to work the detector is called with conf=0.10 (model.track_conf in config.yaml).
+# - track_buffer 90 frames: longer than max_lost_seconds (1.5 s) up to 60 fps; the decision layer drops ids.
+# - gmc_method none: the camera is fixed, no global motion compensation needed.
+tracker_type: botsort
+track_high_thresh: 0.30
+track_low_thresh: 0.10
+new_track_thresh: 0.30
+track_buffer: 90   # frames; 1.5 s x 60 fps (live upper bound); the decision layer drops tracks by max_lost_seconds
+match_thresh: 0.8
+fuse_score: True
+gmc_method: none
+proximity_thresh: 0.5
+appearance_thresh: 0.8
+with_reid: False
+model: auto

@@ -1,0 +1,133 @@
+# GurneyGate configuration
+
+camera:
+  source: 0            # 0 = built-in webcam, or a video file path / rtsp:// URL
+  width: 1280
+  height: 720
+  flip: false
+  # Fallback frame rate: files use the source's real rate, live runs use the measured processing rate.
+  # This value is used only when the source does not report its rate.
+  fps: 30
+  # Frames are downscaled to this width before processing (0 = off). The model resizes to 640 anyway,
+  # so 640 does not change accuracy; it saves time and helps privacy. 320-416 makes faces unrecognisable.
+  process_width: 640
+
+model:
+  weights: weights/gurneygate-yolo26s.pt
+  # The program stops if the weights are missing. It falls back to a generic COCO model (bed = stretcher) only on purpose.
+  allow_fallback: false
+  fallback_weights: yolov8n.pt
+  # Classes that open the door (transport = stretcher + wheelchair + bed).
+  stretcher_classes: [transport, stretcher, gurney, bed, hospital_bed, wheelchair]
+  # Classes that are tracked but DO NOT open the door. The decision uses the track's voted class.
+  block_classes: [cart]
+  # Detection threshold passed to the tracker. The new-track threshold is in the tracker file
+  # (new_track_thresh 0.30); detections between 0.10 and 0.30 only keep existing tracks alive.
+  track_conf: 0.10
+  iou: 0.5
+  # Drop degenerate frame-filling boxes (0..1). A stretcher never looks this large on a door camera.
+  max_box_area: 0.85
+  imgsz: 640
+  device: auto        # auto | cpu | mps | cuda
+  # In gurneygate/trackers/: botsort_door.yaml (fixed camera) | botsort_moving.yaml
+  tracker: botsort_door.yaml
+
+decision:
+  # Door line in normalised image coordinates (0..1). Assumes the camera sits above the door looking
+  # down: a stretcher approaches the door as it moves toward the bottom of the image.
+  door_line_y: 0.85
+  # Direction counted as approaching: down | up | left | right
+  approach_direction: down
+  # "Approaching" must hold for this long (jitter filter). Converted to frames at the current rate,
+  # minimum 2 frames. 0.17 s = 3 frames at 18 fps, 2 at 6 fps
+  # (stretcher parked at the door, +-0.03 jitter: 3/40 false opens at 18 fps, 2/40 at 6 fps).
+  min_consecutive_seconds: 0.17
+  # Minimum speed toward the door (normalised units / second). Measured from the least-squares slope of
+  # the leading edge over motion_window_seconds; the Kalman's instantaneous velocity jumps with box
+  # jitter and makes a parked stretcher look "approaching" (measured: stretcher parked at the door,
+  # +-0.02 jitter, 18 fps: 27/40 -> 1/40 false opens).
+  min_speed_per_s: 0.06
+  # at low frame rates the window grows to hold at least 3 samples (2.5 / fps)
+  motion_window_seconds: 0.5
+  # To open, the Wilson lower bound (one-sided z) of the opening-class vote share must pass this; a
+  # frame whose raw class is cart never opens (even if a cart takes over the track id). Measured over
+  # 200 trials of a 2 s approach: a cart called "transport" half the time opens in 8/200 trials at 30 fps
+  # and 10/200 at 6 fps; a stretcher labelled right 90% of the time opens in 200/200 (30 fps) and 175/200
+  # (6 fps); one labelled right every time always opens (+0.17 s delay at 6 fps).
+  min_open_vote_share: 0.6
+  vote_confidence_z: 1.64
+  # Kalman process noise (units/s^2); only affects the TTA speed. 2 and 28.5 gave the same result in the
+  # simulator and the jitter test.
+  kalman_accel_std: 28.5
+  # Boxes smaller than this fraction of the image are too far away; ignore them
+  min_box_area: 0.03
+  # At-door band: if the leading edge is this close to the line and moving toward the door, open
+  # regardless of TTA and intent (safety band). Long-range opening happens through TTA, not this band.
+  trigger_distance: 0.12
+  # To open in the band, the window slope toward the door must be at least this and exceed the lateral
+  # speed (so a track passing across in front of the door does not open it: +-0.03 jitter, 18 fps: 29/40 -> 0/40)
+  band_min_speed_per_s: 0.10
+  # Full opening time of the door (s); measure it on the actual door operator
+  door_open_time: 1.5
+  # Open when time to arrival <= door_open_time + lead_margin
+  lead_margin: 0.7
+  # A track must have been observed at least this long before it can trigger (min 3 frames). 0.27 s = 8 at 30 fps.
+  min_stable_seconds: 0.27
+  # A track that loses its detection coasts on Kalman prediction for this many seconds, then is dropped
+  max_lost_seconds: 1.5
+  # true: only a stretcher with a person on it opens the door (not staff moving an empty stretcher).
+  # Needs a detector with a 'person' class; the released detector has none, so the program refuses to
+  # start with this set to true.
+  require_occupant: false
+  # TTA opening only while the leading edge is this close to the line. Calibrate at installation:
+  # with a narrow field of view and a fast object the needed lead may be physically impossible.
+  # 0.40: 11/11 scenarios in the simulator; 1.67 s lead for a 0.24 units/s approach (door opens in 1.5 s).
+  max_trigger_distance: 0.40
+  # Learned intent model (second cue): for TTA opening the rule and the model must both say "open".
+  # The model needs 0.3 s of track history; TTA does not trigger before then (except the at-door band).
+  use_intent: true
+  intent_weights: weights/intent.npz
+  intent_threshold: 0.5
+  # Camera-motion compensation. OFF on a fixed door camera; --moving-camera turns it on for handheld
+  # test clips (the tracker also switches to the GMC version).
+  use_egomotion: false
+  # Class voting along the track: suppresses single-frame class flips
+  use_class_vote: true
+  class_vote_window: 15
+  # Monocular depth cue (Depth Anything V2 Small). Not measured, off. On a fixed camera the right way to
+  # get metric speed is a ground-plane homography.
+  use_depth: false
+  depth_min_vel_per_s: 0.12
+  depth_window: 8
+  # How long the door stays open (s); renewed on every new trigger
+  hold_open_seconds: 6.0
+  # Minimum interval between consecutive triggers (s)
+  cooldown_seconds: 1.0
+
+depth:
+  input_size: 294       # 294: 58 ms/frame (Apple M-series), r=0.995 against 518
+  every_n_frames: 2
+
+door:
+  # dryrun | gpio | serial | http
+  backend: dryrun
+  gpio_pin: 17
+  serial_port: /dev/ttyUSB0
+  serial_baud: 9600
+  http_url: http://192.168.1.50/open
+  # URL that releases the relay (e.g. Shelly /relay/0?turn=off). Without it http_url must be self-timing (timer=N).
+  http_close_url: http://192.168.1.50/close
+
+display:
+  show: true
+  draw_tracks: true
+
+logging:
+  # No frames are saved (unless --save is given). Events only: door_open, crossed (lead time),
+  # false_open?, watchdog. Time: ts = wall clock, t = scene time (lead time uses t).
+  events_csv: logs/events.csv
+
+safety:
+  # If the main loop stalls this many seconds (including a blocked RTSP read), a separate watchdog
+  # thread withdraws the trigger and the door runs on its own sensors
+  max_frame_gap_seconds: 1.0

@@ -1,0 +1,14 @@
+# model weights are published as GitHub release assets, not in git
+weights/*.pt
+weights/*.onnx
+weights/*_ncnn_model/
+# benchmark frames are rebuilt locally (not redistributed)
+benchmark/gold_cctv/images/
+benchmark/gold_cctv/_videos/
+# runtime output
+logs/
+runs/
+*.mp4
+__pycache__/
+.pytest_cache/
+.DS_Store
