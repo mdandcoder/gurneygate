@@ -9,7 +9,7 @@
   <img alt="Status: research prototype" src="https://img.shields.io/badge/status-research%20prototype-orange">
 </p>
 
-<p align="center"><img src="docs/assets/pipeline.svg" alt="GurneyGate pipeline: camera, detector, tracker, decision, relay. Intended behaviour: an approaching stretcher opens the door before it arrives; an approaching supply cart or a stretcher passing by does not." width="100%"></p>
+<p align="center"><img src="docs/assets/hero.svg" alt="Animated view from the door camera: a stretcher approaches, its time to arrival counts down and the door opens before it reaches the door line; then a supply cart approaches and the door stays closed. Schematic, not real footage." width="100%"></p>
 
 GurneyGate watches a hospital corridor from a camera above a door. It recognises patient transports
 (stretcher, wheelchair, hospital bed), tracks them, predicts when they will reach the door, and closes a
@@ -24,6 +24,8 @@ button and wait for the door, often during an emergency. GurneyGate aims to remo
 those seconds, by opening the door early for a patient transport while keeping it closed for everyone and
 everything else. That is why a plain motion sensor, which opens for every passer-by, is not enough.
 How much time it saves at a real door has not been measured yet.
+
+<p align="center"><img src="docs/assets/why-timeline.svg" alt="Two timelines of the same stretcher passage. Today: approach, stop and press the button, wait while the door opens, pass. With GurneyGate: the camera triggers at a time to arrival of 2.2 s, the door opens while the team keeps moving, and they pass without stopping." width="100%"></p>
 
 > **Research prototype.** GurneyGate has not yet run above a real door. The results below come from
 > public hospital CCTV clips, stock video and simulation. It is an **activation sensor, not a safety
@@ -46,6 +48,8 @@ python -m gurneygate.main                                    # source from confi
 Quit with `q` or Esc. Orange line: door line. Red box: "open" decision. Blue box: a class that does not open the door.
 
 ## How it works
+<p align="center"><img src="docs/assets/pipeline.svg" alt="GurneyGate pipeline: camera, detector, tracker, decision, relay. Intended behaviour: an approaching stretcher opens the door before it arrives; an approaching supply cart or a stretcher passing by does not." width="100%"></p>
+
 | Stage | Method | Why |
 |---|---|---|
 | Detect | YOLO26s, 640 px, classes `transport` (stretcher, wheelchair, bed) and `cart` | One class for everything that should open the door, one for what should not |
@@ -55,6 +59,8 @@ Quit with `q` or Esc. Orange line: door line. Red box: "open" decision. Blue box
 | Decide | Open when the time to arrival is at most the door opening time plus a margin, and the Wilson lower bound of the track's transport-vote share is at least 0.6, and the current frame does not say `cart` | A track that has crossed the door line, or was first seen past it, never opens |
 | Confirm | Small trajectory MLP (entering / passing / other), trained on synthetic tracks | Long-range opening needs both the rule and the model; an at-door band opens on 0.5 s of motion toward the door |
 | Act | Relay backends: dry run, GPIO, serial, HTTP | Released on normal exit, Ctrl-C, SIGTERM, and by a watchdog thread within 1 s when frames stop |
+
+<p align="center"><img src="docs/assets/decision-chart.svg" alt="Chart from one simulated approach: the estimated time to arrival falls frame by frame; once the stretcher is close enough and the estimate is below 2.2 s the door is triggered, opens in 1.5 s and is fully open 0.17 s before the stretcher reaches the door line. A supply cart in a separate run never triggers." width="100%"></p>
 
 The watchdog cannot help if the process is killed hard (SIGKILL, power loss). For deployment, use a
 relay that releases by itself, for example a Shelly with `?turn=on&timer=3` or a microcontroller with a timeout.

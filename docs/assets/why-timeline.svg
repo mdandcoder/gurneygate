@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 444" width="960" height="444" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Why GurneyGate: the same stretcher passage through a closed door, today and with GurneyGate</title>
+  <style>
+    .bg { fill: #ffffff; }
+    .lane { fill: #f6f8fa; stroke: #d0d7de; }
+    .title { fill: #1f2328; font-size: 15px; font-weight: 600; }
+    .step { fill: #0969da; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
+    .note { fill: #59636e; font-size: 12px; }
+    .key { fill: #1f2328; font-size: 12px; font-weight: 600; }
+    .row { fill: #59636e; font-size: 12px; text-anchor: end; }
+    .c { text-anchor: middle; }
+    .mv, .fb { fill: #0969da; }
+    .sb { stroke: #0969da; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .st { fill: #8c959f; }
+    .op { fill: #1a7f37; fill-opacity: 0.4; }
+    .on, .fg { fill: #1a7f37; }
+    .sg { stroke: #1a7f37; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .fn { fill: #59636e; }
+    .sn { stroke: #59636e; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .frame { stroke: #8c959f; stroke-width: 2; fill: none; }
+    .guide { stroke: #8c959f; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+    .trig { stroke: #1a7f37; stroke-width: 1.5; stroke-dasharray: 3 3; fill: none; }
+    .axis { stroke: #8c959f; stroke-width: 1.5; fill: none; }
+    .head { fill: #8c959f; }
+    .ok { fill: #1a7f37; font-size: 13px; font-weight: 600; }
+    .okb { fill: #1a7f37; font-size: 12px; font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .lane { fill: #161b22; stroke: #30363d; }
+      .title, .key { fill: #e6edf3; }
+      .note, .row { fill: #9198a1; }
+      .step, .mv, .fb { fill: #4493f8; }
+      .sb { stroke: #4493f8; }
+      .st, .head { fill: #6e7681; }
+      .frame, .guide, .axis { stroke: #6e7681; }
+      .op { fill: #3fb950; fill-opacity: 0.4; }
+      .on, .fg, .ok, .okb { fill: #3fb950; }
+      .sg, .trig { stroke: #3fb950; }
+      .fn { fill: #9198a1; }
+      .sn { stroke: #9198a1; }
+    }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="head" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+    <marker id="gh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path class="fg" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+    <!-- stretcher, side view, 44 x 26, moving right -->
+    <g id="str">
+      <path class="sb" d="M-13 6 H-5 M-15 12 H-5 M-13 18 H-5" opacity="0.55"/>
+      <rect class="fb" x="2" y="10" width="40" height="5" rx="2"/>
+      <rect class="fb" x="5" y="4" width="25" height="7" rx="3.5"/>
+      <circle class="fb" cx="35.5" cy="6.5" r="3.5"/>
+      <path class="sb" d="M8 15 V21 M36 15 V21 M5 21 H39"/>
+      <circle class="fb" cx="8" cy="23.5" r="2.5"/>
+      <circle class="fb" cx="36" cy="23.5" r="2.5"/>
+    </g>
+    <!-- hand pressing a wall button, 36 x 28 -->
+    <g id="hand">
+      <rect class="frame" x="23" y="1" width="12" height="26" rx="2"/>
+      <circle class="st" cx="29" cy="14" r="3.5"/>
+      <rect class="fn" x="0" y="9" width="13" height="13" rx="4"/>
+      <rect class="fn" x="9" y="10" width="15" height="4.5" rx="2.25"/>
+      <rect class="fn" x="7" y="5" width="4.5" height="9" rx="2.25" transform="rotate(-30 9 9)"/>
+    </g>
+    <!-- sliding door, opening (leaves part-way) -->
+    <g id="dopening">
+      <rect class="frame" x="1" y="1" width="30" height="28" rx="2"/>
+      <rect class="op" x="4" y="4" width="7" height="22" rx="1"/>
+      <rect class="op" x="21" y="4" width="7" height="22" rx="1"/>
+      <path class="sg" d="M15 11.5 L13 15 L15 18.5 M17 11.5 L19 15 L17 18.5" style="stroke-width:1.5"/>
+    </g>
+    <!-- sliding door, fully open -->
+    <g id="dopen">
+      <rect class="frame" x="1" y="1" width="30" height="28" rx="2"/>
+      <rect class="on" x="4" y="4" width="4" height="22" rx="1"/>
+      <rect class="on" x="24" y="4" width="4" height="22" rx="1"/>
+    </g>
+    <!-- ceiling camera with trigger signal -->
+    <g id="cam">
+      <path class="sn" d="M-12 1 H12 M0 1 V6"/>
+      <rect class="fn" x="-9" y="6" width="18" height="10" rx="2"/>
+      <path class="fn" d="M-4 16 H4 L6 20 H-6 Z"/>
+      <path class="sg" d="M-5 25 Q0 28 5 25 M-9 29 Q0 34 9 29"/>
+    </g>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="444" rx="12"/>
+
+  <!-- header -->
+  <text class="step" x="36" y="35">WHY</text>
+  <text class="title" x="80" y="35">One stretcher passage through a closed clinical door</text>
+  <g id="legend">
+    <rect class="mv" x="596" y="25" width="16" height="10" rx="3"/><text class="note" x="618" y="34">moving</text>
+    <rect class="st" x="678" y="25" width="16" height="10" rx="3"/><text class="note" x="700" y="34">stopped / closed</text>
+    <rect class="op" x="806" y="25" width="16" height="10" rx="3"/><text class="note" x="828" y="34">opening</text>
+    <rect class="on" x="884" y="25" width="16" height="10" rx="3"/><text class="note" x="906" y="34">open</text>
+  </g>
+
+  <!-- lane cards -->
+  <rect class="lane" x="20" y="56" width="920" height="144" rx="10"/>
+  <rect class="lane" x="20" y="212" width="920" height="144" rx="10"/>
+
+  <!-- guides: arrival at the door (shared), end of today's passage -->
+  <path class="guide" d="M490 66 V226 M490 264 V376"/>
+  <path class="guide" d="M850 116 V284"/>
+
+  <!-- ===== Today ===== -->
+  <text class="title" x="36" y="86">Today</text>
+  <text class="note" x="36" y="106">stop, press, wait</text>
+  <text class="row" x="208" y="126">stretcher</text>
+  <text class="row" x="208" y="166">door</text>
+
+  <rect class="mv" x="220" y="116" width="268" height="12" rx="3"/>
+  <rect class="st" x="492" y="116" width="86" height="12" rx="3"/>
+  <rect class="st" x="582" y="116" width="131" height="12" rx="3"/>
+  <rect class="mv" x="717" y="116" width="133" height="12" rx="3"/>
+  <text class="note c" x="354" y="146">approach</text>
+  <text class="key c" x="535" y="146">stop + press</text>
+  <text class="key c" x="647.5" y="146">wait</text>
+  <text class="note c" x="783.5" y="146">through</text>
+
+  <rect class="st" x="220" y="156" width="358" height="12" rx="3"/>
+  <rect class="op" x="582" y="156" width="131" height="12" rx="3"/>
+  <rect class="on" x="717" y="156" width="133" height="12" rx="3"/>
+  <text class="note c" x="399" y="186">closed</text>
+  <text class="note c" x="647.5" y="186">opening 1.5 s</text>
+  <text class="note c" x="783.5" y="186">open</text>
+
+  <use href="#str" xlink:href="#str" x="332" y="76"/>
+  <use href="#hand" xlink:href="#hand" x="517" y="76"/>
+  <use href="#dopening" xlink:href="#dopening" x="631" y="74"/>
+  <use href="#str" xlink:href="#str" x="762" y="76"/>
+
+  <!-- ===== With GurneyGate ===== -->
+  <text class="title" x="36" y="242">With GurneyGate</text>
+  <text class="note" x="36" y="262">door opens on the way</text>
+  <text class="row" x="208" y="282">stretcher</text>
+  <text class="row" x="208" y="322">door</text>
+
+  <path class="trig" d="M292 262 V312"/>
+  <rect class="mv" x="220" y="272" width="268" height="12" rx="3"/>
+  <rect class="mv" x="492" y="272" width="133" height="12" rx="3"/>
+  <text class="note c" x="354" y="302">approach</text>
+  <text class="okb c" x="558.5" y="302">through, no stop</text>
+  <path class="sn" d="M427 294 V302 M427 298 H440 M477 298 H490 M490 294 V302" style="stroke-width:1.5"/>
+  <text class="key c" x="458.5" y="302">0.7 s</text>
+
+  <rect class="st" x="220" y="312" width="70" height="12" rx="3"/>
+  <rect class="op" x="294" y="312" width="131" height="12" rx="3"/>
+  <rect class="on" x="429" y="312" width="196" height="12" rx="3"/>
+  <text class="note c" x="255" y="342">closed</text>
+  <text class="note c" x="359.5" y="342">opening 1.5 s</text>
+  <text class="note c" x="527" y="342">open</text>
+
+  <use href="#cam" xlink:href="#cam" x="292" y="226"/>
+  <text class="note" x="312" y="240">camera triggers</text>
+  <text class="key" x="312" y="256">at TTA 2.2 s</text>
+  <use href="#dopen" xlink:href="#dopen" x="474" y="230"/>
+  <use href="#str" xlink:href="#str" x="537" y="232"/>
+
+  <path class="sg" d="M633 278 H844" marker-start="url(#gh)" marker-end="url(#gh)"/>
+  <text class="ok c" x="738.5" y="262">time saved</text>
+
+  <!-- time axis -->
+  <path class="axis" d="M220 376 H890" marker-end="url(#ah)"/>
+  <text class="note" x="898" y="380">time</text>
+  <text class="note c" x="490" y="396">arrives at the door</text>
+
+  <text class="note" x="36" y="426">Schematic, one time scale. Door opening 1.5 s and trigger at TTA ≤ 2.2 s (1.5 s + 0.7 s margin) are config defaults; other durations are illustrative.</text>
+</svg>

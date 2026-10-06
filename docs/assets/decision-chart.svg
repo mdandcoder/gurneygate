@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 452" width="960" height="452" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>When does the door open? Simulated approach of an occupied stretcher</title>
+  <style>
+    .bg { fill: #ffffff; }
+    .title { fill: #1f2328; font-size: 18px; font-weight: 600; }
+    .sub, .note, .tick { fill: #59636e; font-size: 12px; }
+    .label { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .grid { stroke: #d0d7de; stroke-width: 1; }
+    .axis { stroke: #8c959f; stroke-width: 1; }
+    .far { fill: #8c959f; opacity: 0.13; }
+    .dot { fill: #0969da; }
+    .gurney { fill: #0969da; }
+    .truth { stroke: #0969da; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; opacity: 0.7; }
+    .cartl { stroke: #9a6700; stroke-width: 2; fill: none; opacity: 0.55; }
+    .cart { fill: #9a6700; }
+    .thr { stroke: #1f2328; stroke-width: 1.5; stroke-dasharray: 6 4; }
+    .open { fill: #1a7f37; } .openl { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .opening { fill: #1a7f37; opacity: 0.28; }
+    .closed { fill: #8c959f; opacity: 0.45; }
+    .ok { fill: #1a7f37; font-size: 13px; font-weight: 600; }
+    .arr { stroke: #1f2328; stroke-width: 1.5; }
+    .inbar { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .onopen { fill: #ffffff; font-size: 13px; font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .title, .label, .inbar { fill: #e6edf3; }
+      .sub, .note, .tick { fill: #9198a1; }
+      .grid { stroke: #30363d; } .axis { stroke: #6e7681; }
+      .far { fill: #6e7681; opacity: 0.2; }
+      .dot, .gurney { fill: #4493f8; } .truth { stroke: #4493f8; }
+      .cartl { stroke: #d29922; } .cart { fill: #d29922; }
+      .thr, .arr { stroke: #e6edf3; }
+      .open, .ok, .opening { fill: #3fb950; } .openl { stroke: #3fb950; }
+      .closed { fill: #6e7681; }
+      .onopen { fill: #0d1117; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="452" rx="12"/>
+
+  <text class="title" x="24" y="38">When does the door open?</text>
+  <text class="sub" x="24" y="60">Simulated approach: occupied stretcher, 0.24 image heights/s, 30 fps, run through GurneyGate's real decision code.</text>
+
+  <!-- legend -->
+  <g transform="translate(24,86)">
+    <circle class="dot" cx="6" cy="-4" r="3"/><text class="note" x="16" y="0">estimated time to arrival, each frame</text>
+    <line class="truth" x1="262" x2="290" y1="-4" y2="-4"/><text class="note" x="298" y="0">actual time to arrival</text>
+    <line class="cartl" x1="452" x2="480" y1="-4" y2="-4"/><text class="note" x="488" y="0">supply cart, separate run: never opens</text>
+  </g>
+
+  <!-- plot -->
+  <rect class="far" x="92" y="108" width="250.1" height="192"/>
+  <line class="grid" x1="92" x2="900" y1="300.0" y2="300.0"/><text class="tick" x="82" y="304.0" text-anchor="end">0</text><line class="grid" x1="92" x2="900" y1="256.4" y2="256.4"/><text class="tick" x="82" y="260.4" text-anchor="end">1</text><line class="grid" x1="92" x2="900" y1="212.7" y2="212.7"/><text class="tick" x="82" y="216.7" text-anchor="end">2</text><line class="grid" x1="92" x2="900" y1="169.1" y2="169.1"/><text class="tick" x="82" y="173.1" text-anchor="end">3</text>
+  <line class="axis" x1="92" x2="900" y1="300" y2="300"/>
+  <text class="tick" x="92.0" y="318" text-anchor="middle">0</text><text class="tick" x="236.3" y="318" text-anchor="middle">0.5</text><text class="tick" x="380.6" y="318" text-anchor="middle">1</text><text class="tick" x="524.9" y="318" text-anchor="middle">1.5</text><text class="tick" x="669.1" y="318" text-anchor="middle">2</text><text class="tick" x="813.4" y="318" text-anchor="middle">2.5</text>
+  <text class="tick" x="900" y="318" text-anchor="end">time (s)</text>
+  <text class="tick" transform="translate(40,204) rotate(-90)" text-anchor="middle">time to arrival (s)</text>
+
+  <text class="label" x="102" y="126">Too far: no opening yet</text>
+  <text class="note" x="102" y="142">edge &gt; 0.40 image heights from line</text>
+
+  <line class="thr" x1="92" x2="900" y1="204.0" y2="204.0"/>
+  <text class="label" x="812" y="196.0" text-anchor="end">open when time to arrival ≤ 2.2 s</text>
+  <text class="note" x="812" y="221.0" text-anchor="end">door_open_time 1.5 s + lead_margin 0.7 s</text>
+
+  <line class="truth" x1="92.0" y1="189.5" x2="823.0" y2="300.0"/>
+  <polyline class="cartl" points="101.6,248.8 111.2,250.6 120.9,252.1 130.5,253.5 140.1,254.9 149.7,256.4 159.3,257.8 169.0,259.3 178.6,260.7 188.2,262.2 197.8,263.6 207.4,265.1 217.0,266.5 226.7,268.0 236.3,269.5 245.9,270.9 255.5,272.4 265.1,273.8 274.8,275.3 284.4,276.7 294.0,278.2 303.6,279.6 313.2,281.1 322.9,282.5 332.5,284.0 342.1,285.5 351.7,286.9 361.3,288.4 371.0,289.8 380.6,291.3 390.2,292.7 399.8,294.2 409.4,295.6 419.0,297.1 428.7,298.5 438.3,300.0"/>
+  <g class="dot"><circle cx="101.6" cy="168.5" r="2.6"/><circle cx="111.2" cy="217.1" r="2.6"/><circle cx="120.9" cy="163.9" r="2.6"/><circle cx="130.5" cy="209.7" r="2.6"/><circle cx="140.1" cy="198.1" r="2.6"/><circle cx="149.7" cy="168.7" r="2.6"/><circle cx="159.3" cy="216.2" r="2.6"/><circle cx="169.0" cy="180.5" r="2.6"/><circle cx="178.6" cy="215.6" r="2.6"/><circle cx="188.2" cy="189.5" r="2.6"/><circle cx="197.8" cy="197.9" r="2.6"/><circle cx="207.4" cy="223.8" r="2.6"/><circle cx="217.0" cy="235.3" r="2.6"/><circle cx="226.7" cy="171.3" r="2.6"/><circle cx="236.3" cy="195.6" r="2.6"/><circle cx="245.9" cy="231.0" r="2.6"/><circle cx="255.5" cy="238.7" r="2.6"/><circle cx="265.1" cy="207.8" r="2.6"/><circle cx="274.8" cy="192.9" r="2.6"/><circle cx="284.4" cy="238.1" r="2.6"/><circle cx="294.0" cy="160.6" r="2.6"/><circle cx="303.6" cy="239.5" r="2.6"/><circle cx="313.2" cy="209.3" r="2.6"/><circle cx="322.9" cy="203.1" r="2.6"/><circle cx="332.5" cy="218.0" r="2.6"/><circle cx="342.1" cy="235.7" r="2.6"/><circle cx="351.7" cy="250.9" r="2.6"/><circle cx="361.3" cy="210.6" r="2.6"/><circle cx="371.0" cy="237.8" r="2.6"/><circle cx="380.6" cy="241.6" r="2.6"/><circle cx="390.2" cy="226.2" r="2.6"/><circle cx="399.8" cy="239.2" r="2.6"/><circle cx="409.4" cy="213.7" r="2.6"/><circle cx="419.0" cy="228.8" r="2.6"/><circle cx="428.7" cy="245.2" r="2.6"/><circle cx="438.3" cy="259.0" r="2.6"/><circle cx="447.9" cy="245.4" r="2.6"/><circle cx="457.5" cy="237.4" r="2.6"/><circle cx="467.1" cy="252.8" r="2.6"/><circle cx="476.8" cy="248.6" r="2.6"/><circle cx="486.4" cy="243.1" r="2.6"/><circle cx="496.0" cy="262.4" r="2.6"/><circle cx="505.6" cy="257.8" r="2.6"/><circle cx="515.2" cy="235.0" r="2.6"/><circle cx="524.9" cy="258.4" r="2.6"/><circle cx="534.5" cy="259.7" r="2.6"/><circle cx="544.1" cy="267.8" r="2.6"/><circle cx="553.7" cy="262.0" r="2.6"/><circle cx="563.3" cy="243.4" r="2.6"/><circle cx="573.0" cy="272.2" r="2.6"/><circle cx="582.6" cy="244.2" r="2.6"/><circle cx="592.2" cy="264.9" r="2.6"/><circle cx="601.8" cy="275.0" r="2.6"/><circle cx="611.4" cy="258.4" r="2.6"/><circle cx="621.0" cy="272.0" r="2.6"/><circle cx="630.7" cy="263.3" r="2.6"/><circle cx="640.3" cy="279.8" r="2.6"/><circle cx="649.9" cy="280.6" r="2.6"/><circle cx="659.5" cy="275.7" r="2.6"/><circle cx="669.1" cy="281.1" r="2.6"/><circle cx="678.8" cy="270.8" r="2.6"/><circle cx="688.4" cy="282.6" r="2.6"/><circle cx="698.0" cy="283.1" r="2.6"/><circle cx="707.6" cy="284.0" r="2.6"/><circle cx="717.2" cy="283.9" r="2.6"/><circle cx="726.9" cy="289.5" r="2.6"/><circle cx="736.5" cy="290.8" r="2.6"/><circle cx="746.1" cy="286.6" r="2.6"/><circle cx="755.7" cy="291.1" r="2.6"/><circle cx="765.3" cy="287.5" r="2.6"/><circle cx="775.0" cy="295.4" r="2.6"/><circle cx="784.6" cy="296.4" r="2.6"/><circle cx="794.2" cy="298.2" r="2.6"/><circle cx="803.8" cy="299.1" r="2.6"/><circle cx="813.4" cy="299.7" r="2.6"/></g>
+
+  <!-- trigger and arrival -->
+  <line class="openl" x1="342.1" x2="342.1" y1="108" y2="374"/>
+  <circle class="bg" cx="342.1" cy="235.7" r="6"/>
+  <circle class="openl" cx="342.1" cy="235.7" r="6"/>
+  <text class="ok" x="350.1" y="126">OPEN signal at 0.87 s</text>
+  <path class="arr" d="M823.0,108 V300 M823.0,326 V374"/>
+  <text class="label" x="815.0" y="126" text-anchor="end">stretcher reaches</text>
+  <text class="label" x="815.0" y="142" text-anchor="end">the door line, 2.53 s</text>
+
+  <!-- door lane -->
+  <text class="label" x="24" y="364">Door</text>
+  <rect class="closed" x="92" y="344" width="250.1" height="30" rx="4"/>
+  <text class="inbar" x="102" y="364">closed</text>
+  <rect class="opening" x="342.1" y="344" width="432.9" height="30" rx="4"/>
+  <text class="inbar" x="352.1" y="364">opening, door_open_time 1.5 s</text>
+  <rect class="open" x="775.0" y="344" width="125.0" height="30" rx="4"/>
+  <text class="onopen" x="783.0" y="364">fully open</text>
+
+  <!-- lead time bracket -->
+  <path class="openl" d="M342.1,386 V392 H823.0 V386"/>
+  <text class="ok" x="582.6" y="412" text-anchor="middle">lead time 1.67 s: the door is fully open 0.17 s before the stretcher arrives</text>
+  <text class="note" x="900" y="438" text-anchor="end">Schematic of one simulator run (seed 7), not a measurement at a real door.</text>
+</svg>

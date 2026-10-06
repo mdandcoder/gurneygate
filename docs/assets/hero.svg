@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="Door camera view: a stretcher approaching the door opens it before it arrives; a supply cart approaching the same way leaves it closed.">
+<style>
+.bg{fill:#fff}.card{fill:#f6f8fa;stroke:#d0d7de}.frame{fill:none;stroke:#d0d7de}
+.title{fill:#1f2328;font-size:15px;font-weight:600}.sub{fill:#59636e;font-size:12px}
+.step{fill:#0969da;font-size:12px;font-weight:700;letter-spacing:.08em}
+.ceil{fill:#fff}.wall{fill:#f1f3f5}.floor{fill:#e3e8ed}.far{fill:#d5dbe1}.sdoor{fill:#e1e6eb}
+.ln{stroke:#c9d1d9;fill:none}.rail{stroke:#afb8c1;fill:none}.lamp{fill:#fff;stroke:#d0d7de}
+.dl{stroke:#bc4c00;stroke-width:2.5;stroke-dasharray:10 6;fill:none}.dlt{fill:#bc4c00;font-size:12px;font-weight:600}
+.g{fill:#0969da}.g2{fill:#0550ae}.gl{fill:#ddf4ff}.c{fill:#9a6700}.c2{fill:#7d4e00}.cl{fill:#fff8c5}
+.ink{fill:#57606a}.head{fill:#afb8c1}.staff{fill:#8c959f}
+.bx{fill:none;stroke:#0969da;stroke-width:2}.bxc{fill:none;stroke:#9a6700;stroke-width:2}
+.trk{stroke:#0969da;stroke-width:1.5;stroke-dasharray:3 4}.trkc{stroke:#9a6700;stroke-width:1.5;stroke-dasharray:3 4}
+.lbt{fill:#fff;font-size:12px;font-weight:600}
+.hud{fill:#fff;stroke:#d0d7de;fill-opacity:.94}.hl{fill:#59636e;font-size:12px}.hb{fill:#59636e;font-size:12px;font-weight:700;letter-spacing:.06em}
+.tta{fill:#1f2328;font-size:20px;font-weight:700}.ok{fill:#1a7f37;font-size:14px;font-weight:700}
+.okt{fill:#1a7f37;font-size:13px;font-weight:600}.no{fill:#59636e;font-size:13px;font-weight:600}
+.gt{fill:#eaeef2}.open{fill:#1a7f37}.closed{fill:#8c959f}.pt{fill:#fff;font-size:12px;font-weight:700}
+.aper{fill:#eaeef2}.tick{stroke:#1f2328;stroke-width:1.5}.rule{fill:#1f2328;font-size:13px;font-weight:600}
+@media (prefers-color-scheme:dark){
+.bg{fill:#0d1117}.card{fill:#161b22;stroke:#30363d}.frame{stroke:#30363d}
+.title,.rule{fill:#e6edf3}.sub,.hl,.hb,.no{fill:#9198a1}.step{fill:#4493f8}
+.ceil{fill:#0d1117}.wall{fill:#151a21}.floor{fill:#1f252d}.far{fill:#2a313a}.sdoor{fill:#1c222a}
+.ln{stroke:#30363d}.rail{stroke:#484f58}.lamp{fill:#2d333b;stroke:#3d444d}
+.dl{stroke:#db6d28}.dlt{fill:#db6d28}
+.g{fill:#4493f8}.g2{fill:#1f6feb}.gl{fill:#cae8ff}.c{fill:#d29922}.c2{fill:#9e6a03}.cl{fill:#f8e3a1}
+.ink{fill:#8b949e}.head{fill:#8b949e}.staff{fill:#6e7681}
+.bx{stroke:#4493f8}.bxc{stroke:#d29922}.trk{stroke:#4493f8}.trkc{stroke:#d29922}.lbt,.pt{fill:#0d1117}
+.hud{fill:#0d1117;stroke:#30363d}.tta{fill:#e6edf3}.tick{stroke:#e6edf3}
+.ok,.okt{fill:#3fb950}.open{fill:#3fb950}.closed{fill:#6e7681}.gt,.aper{fill:#21262d}}
+</style>
+<defs><clipPath id="cf"><rect x="20" y="20" width="580" height="380" rx="10"/></clipPath><clipPath id="ap"><rect x="708" y="110" width="140" height="106"/></clipPath></defs>
+<rect class="bg" width="960" height="420" rx="12"/>
+<g clip-path="url(#cf)">
+<rect class="wall" x="20" y="20" width="580" height="380"/>
+<polygon class="ceil" points="-535.0,-142.0 1155.0,-142.0 331.1,111.5 288.9,111.5"/>
+<polygon class="floor" points="-535.0,1678.0 1155.0,1678.0 331.1,157.0 288.9,157.0"/>
+<rect class="far" x="288.9" y="111.5" width="42.2" height="45.5"/>
+<rect class="sdoor" x="301.1" y="122.9" width="17.9" height="34.1"/>
+<line class="ln" x1="310.0" y1="122.9" x2="310.0" y2="157.0"/>
+<polygon class="sdoor" points="242.4,242.8 242.4,133.6 255.5,130.6 255.5,218.6"/>
+<polygon class="sdoor" points="352.2,196.0 352.2,127.8 346.7,126.5 346.7,185.8"/>
+<polygon class="sdoor" points="277.8,177.4 277.8,125.4 281.1,124.7 281.1,171.3"/>
+<line class="ln" x1="156.4" y1="401.6" x2="463.6" y2="401.6"/>
+<line class="ln" x1="197.3" y1="326.0" x2="422.7" y2="326.0"/>
+<line class="ln" x1="225.5" y1="274.0" x2="394.5" y2="274.0"/>
+<line class="ln" x1="242.4" y1="242.8" x2="377.6" y2="242.8"/>
+<line class="ln" x1="253.7" y1="222.0" x2="366.3" y2="222.0"/>
+<line class="ln" x1="264.9" y1="201.2" x2="355.1" y2="201.2"/>
+<line class="ln" x1="272.4" y1="187.3" x2="347.6" y2="187.3"/>
+<line class="ln" x1="279.3" y1="174.7" x2="340.7" y2="174.7"/>
+<line class="ln" x1="285.0" y1="164.2" x2="335.0" y2="164.2"/>
+<line class="ln" stroke-width="1" x1="-535.0" y1="1600.0" x2="288.9" y2="155.1"/>
+<line class="rail" stroke-width="2" x1="-535.0" y1="1093.0" x2="288.9" y2="142.4"/>
+<line class="ln" stroke-width="1" x1="-535.0" y1="-142.0" x2="288.9" y2="111.5"/>
+<line class="ln" x1="-535.0" y1="1678.0" x2="288.9" y2="157.0"/>
+<line class="ln" stroke-width="1" x1="1155.0" y1="1600.0" x2="331.1" y2="155.1"/>
+<line class="rail" stroke-width="2" x1="1155.0" y1="1093.0" x2="331.1" y2="142.4"/>
+<line class="ln" stroke-width="1" x1="1155.0" y1="-142.0" x2="331.1" y2="111.5"/>
+<line class="ln" x1="1155.0" y1="1678.0" x2="331.1" y2="157.0"/>
+<polygon class="lamp" points="280.0,78.0 340.0,78.0 333.6,86.5 286.4,86.5"/>
+<polygon class="lamp" points="294.4,97.2 325.6,97.2 323.7,99.8 296.3,99.8"/>
+<polygon class="lamp" points="300.2,105.0 319.8,105.0 319.0,106.0 301.0,106.0"/>
+<polygon class="lamp" points="303.5,109.3 316.5,109.3 316.1,109.8 303.9,109.8"/>
+<line class="dl" x1="20" y1="343.0" x2="600" y2="343.0"/>
+<text class="dlt" x="588" y="335.0" text-anchor="end">door line</text>
+<g opacity="1"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.45" values="1;0"/><line class="trk" x1="310.0" x2="310.0" y1="200.4" y2="343.0" opacity="1"><animate attributeName="y1" dur="10s" repeatCount="indefinite" keyTimes="0;0.02;0.04;0.06;0.08;0.1;0.12;0.14;0.16;0.18;0.2;0.22;0.24;0.26;0.28;0.3;0.32;0.34;0.36;0.38;0.4;0.42;0.44;1" values="200.4;203.1;206.0;209.1;212.4;215.9;219.7;223.9;228.4;233.3;238.6;244.5;251.0;258.1;266.1;275.0;285.1;296.6;309.8;325.1;343.0;364.3;390.1;390.1"/><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.4" values="1;0"/></line><g transform="translate(310.0,200.4) scale(34.33)"><animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.02;0.04;0.06;0.08;0.1;0.12;0.14;0.16;0.18;0.2;0.22;0.24;0.26;0.28;0.3;0.32;0.34;0.36;0.38;0.4;0.42;0.44;1" values="310.0,200.4;310.0,203.1;310.0,206.0;310.0,209.1;310.0,212.4;310.0,215.9;310.0,219.7;310.0,223.9;310.0,228.4;310.0,233.3;310.0,238.6;310.0,244.5;310.0,251.0;310.0,258.1;310.0,266.1;310.0,275.0;310.0,285.1;310.0,296.6;310.0,309.8;310.0,325.1;310.0,343.0;310.0,364.3;310.0,390.1;310.0,390.1"/><animateTransform attributeName="transform" type="scale" additive="sum" dur="10s" repeatCount="indefinite" keyTimes="0;0.02;0.04;0.06;0.08;0.1;0.12;0.14;0.16;0.18;0.2;0.22;0.24;0.26;0.28;0.3;0.32;0.34;0.36;0.38;0.4;0.42;0.44;1" values="34.33;35.45;36.65;37.94;39.31;40.79;42.39;44.12;45.99;48.03;50.26;52.70;55.40;58.38;61.71;65.44;69.64;74.43;79.92;86.28;93.75;102.63;113.37;113.37"/>
+<rect class="staff" x="-.14" y="-1.8" width=".28" height=".5" rx=".07"/><circle class="staff" cx="0" cy="-1.86" r=".075"/>
+<rect class="ink" x="-.31" y="-.76" width=".045" height=".7"/><rect class="ink" x=".265" y="-.76" width=".045" height=".7"/>
+<rect class="ink" x="-.3" y="-.36" width=".6" height=".04"/>
+<circle class="ink" cx="-.29" cy="-.07" r=".07"/><circle class="ink" cx=".29" cy="-.07" r=".07"/>
+<polygon class="gl" points="-.36,-.92 .36,-.92 .25,-1.38 -.25,-1.38"/>
+<ellipse class="gl" cx="0" cy="-1.33" rx=".15" ry=".04"/><circle class="head" cx="0" cy="-1.27" r=".075"/>
+<path class="g" d="M-.34,-.93 L.34,-.93 L.29,-1.13 Q0,-1.24 -.29,-1.13 Z"/>
+<rect class="g2" x="-.37" y="-.92" width=".74" height=".17" rx=".03"/>
+<rect class="bx" vector-effect="non-scaling-stroke" x="-0.4" y="-1.43" width="0.8" height="1.45"/></g><g transform="translate(296.3,151.3)"><animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.02;0.04;0.06;0.08;0.1;0.12;0.14;0.16;0.18;0.2;0.22;0.24;0.26;0.28;0.3;0.32;0.34;0.36;0.38;0.4;0.42;0.44;1" values="296.3,151.3;295.8,152.4;295.3,153.6;294.8,154.8;294.3,156.1;293.7,157.6;293.0,159.1;292.4,160.8;291.6,162.6;290.8,164.6;289.9,166.8;288.9,169.1;287.8,171.7;286.6,174.6;285.3,177.9;283.8,181.5;282.1,185.6;280.2,190.2;278.0,195.5;275.5,201.7;272.5,208.9;268.9,217.6;264.7,228.0;264.7,228.0"/><rect class="g" x="-1" y="-19" width="104" height="19" rx="3"/><text class="lbt" x="6" y="-5">transport 0.91</text></g></g>
+<g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.52;0.98" values="0;1;0"/><line class="trkc" x1="310.0" x2="310.0" y1="200.4" y2="343.0" opacity="0"><animate attributeName="y1" dur="10s" repeatCount="indefinite" keyTimes="0;0.52;0.54;0.56;0.58;0.6;0.62;0.64;0.66;0.68;0.7;0.72;0.74;0.76;0.78;0.8;0.82;0.84;0.86;0.88;0.9;0.92;1" values="200.4;200.4;203.1;206.0;209.1;212.4;215.9;219.7;223.9;228.4;233.3;238.6;244.5;251.0;258.1;266.1;275.0;285.1;296.6;309.8;325.1;343.0;343.0"/><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.52;0.92" values="0;1;0"/></line><g transform="translate(310.0,200.4) scale(34.33)"><animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.52;0.54;0.56;0.58;0.6;0.62;0.64;0.66;0.68;0.7;0.72;0.74;0.76;0.78;0.8;0.82;0.84;0.86;0.88;0.9;0.92;1" values="310.0,200.4;310.0,200.4;310.0,203.1;310.0,206.0;310.0,209.1;310.0,212.4;310.0,215.9;310.0,219.7;310.0,223.9;310.0,228.4;310.0,233.3;310.0,238.6;310.0,244.5;310.0,251.0;310.0,258.1;310.0,266.1;310.0,275.0;310.0,285.1;310.0,296.6;310.0,309.8;310.0,325.1;310.0,343.0;310.0,343.0"/><animateTransform attributeName="transform" type="scale" additive="sum" dur="10s" repeatCount="indefinite" keyTimes="0;0.52;0.54;0.56;0.58;0.6;0.62;0.64;0.66;0.68;0.7;0.72;0.74;0.76;0.78;0.8;0.82;0.84;0.86;0.88;0.9;0.92;1" values="34.33;34.33;35.45;36.65;37.94;39.31;40.79;42.39;44.12;45.99;48.03;50.26;52.70;55.40;58.38;61.71;65.44;69.64;74.43;79.92;86.28;93.75;93.75"/>
+<rect class="staff" x="-.17" y="-1.66" width=".34" height=".5" rx=".08"/><circle class="staff" cx="0" cy="-1.74" r=".085"/>
+<circle class="ink" cx="-.25" cy="-.06" r=".06"/><circle class="ink" cx=".25" cy="-.06" r=".06"/>
+<polygon class="c2" points="-.3,-1 .3,-1 .255,-1.21 -.255,-1.21"/>
+<rect class="cl" x="-.3" y="-1" width=".6" height=".92"/>
+<rect class="c" x="-.2" y="-.78" width=".22" height=".2"/><rect class="c" x=".05" y="-.74" width=".16" height=".16"/>
+<rect class="c" x="-.22" y="-.4" width=".3" height=".24"/>
+<rect class="c" x="-.3" y="-1" width=".6" height=".05"/><rect class="c" x="-.3" y="-.6" width=".6" height=".04"/>
+<rect class="c" x="-.3" y="-.16" width=".6" height=".05"/>
+<rect class="c" x="-.3" y="-1" width=".04" height=".92"/><rect class="c" x=".26" y="-1" width=".04" height=".92"/>
+<rect class="bxc" vector-effect="non-scaling-stroke" x="-0.34" y="-1.24" width="0.68" height="1.26"/></g><g transform="translate(298.3,157.8)"><animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.52;0.54;0.56;0.58;0.6;0.62;0.64;0.66;0.68;0.7;0.72;0.74;0.76;0.78;0.8;0.82;0.84;0.86;0.88;0.9;0.92;1" values="298.3,157.8;298.3,157.8;297.9,159.1;297.5,160.5;297.1,162.0;296.6,163.6;296.1,165.3;295.6,167.2;295.0,169.2;294.4,171.3;293.7,173.7;292.9,176.3;292.1,179.1;291.2,182.3;290.1,185.7;289.0,189.6;287.8,193.9;286.3,198.8;284.7,204.3;282.8,210.7;280.7,218.1;278.1,226.7;278.1,226.7"/><rect class="c" x="-1" y="-19" width="70" height="19" rx="3"/><text class="lbt" x="6" y="-5">cart 0.88</text></g></g>
+</g>
+<rect class="frame" x="20" y="20" width="580" height="380" rx="10"/>
+<rect class="hud" x="32" y="32" width="220" height="122" rx="8"/>
+<text class="hl" x="46" y="52" opacity="1"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.44" values="1;0"/>track 7 · transport</text>
+<text class="hl" x="46" y="52" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.52;0.98" values="0;1;0"/>track 8 · cart</text>
+<text class="hl" x="46" y="52" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.44;0.52;0.98" values="0;1;0;1"/>no track</text>
+<text class="tta" x="46" y="80" opacity="1"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.02;0.52;0.54" values="1;0;1;0"/>TTA 4.0 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.02;0.04;0.54;0.56" values="0;1;0;1;0"/>TTA 3.8 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.04;0.06;0.56;0.58" values="0;1;0;1;0"/>TTA 3.6 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.06;0.08;0.58;0.6" values="0;1;0;1;0"/>TTA 3.4 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.08;0.1;0.6;0.62" values="0;1;0;1;0"/>TTA 3.2 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.1;0.12;0.62;0.64" values="0;1;0;1;0"/>TTA 3.0 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.12;0.14;0.64;0.66" values="0;1;0;1;0"/>TTA 2.8 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.14;0.16;0.66;0.68" values="0;1;0;1;0"/>TTA 2.6 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.16;0.18;0.68;0.7" values="0;1;0;1;0"/>TTA 2.4 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.2;0.7;0.72" values="0;1;0;1;0"/>TTA 2.2 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.2;0.22;0.72;0.74" values="0;1;0;1;0"/>TTA 2.0 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.22;0.24;0.74;0.76" values="0;1;0;1;0"/>TTA 1.8 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.24;0.26;0.76;0.78" values="0;1;0;1;0"/>TTA 1.6 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.26;0.28;0.78;0.8" values="0;1;0;1;0"/>TTA 1.4 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.28;0.3;0.8;0.82" values="0;1;0;1;0"/>TTA 1.2 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.3;0.32;0.82;0.84" values="0;1;0;1;0"/>TTA 1.0 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.32;0.34;0.84;0.86" values="0;1;0;1;0"/>TTA 0.8 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.34;0.36;0.86;0.88" values="0;1;0;1;0"/>TTA 0.6 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.36;0.38;0.88;0.9" values="0;1;0;1;0"/>TTA 0.4 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.38;0.4;0.9;0.92" values="0;1;0;1;0"/>TTA 0.2 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.4;0.44;0.92;0.98" values="0;1;0;1;0"/>TTA 0.0 s</text>
+<text class="tta" x="46" y="80" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.44;0.52;0.98" values="0;1;0;1"/>TTA –</text>
+<text class="ok" x="238" y="79" text-anchor="end" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.44" values="0;1;0"/>→ OPEN</text>
+<text class="hl" x="238" y="79" text-anchor="end" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.52;0.98" values="0;1;0"/>no trigger</text>
+<rect class="gt" x="46" y="90" width="172" height="8" rx="4"/>
+<rect class="g" x="46" y="90" width="172.0" height="8" rx="4" opacity="1"><animate attributeName="width" dur="10s" repeatCount="indefinite" keyTimes="0;0.4;1" values="172.0;0;0"/><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.44" values="1;0"/></rect>
+<rect class="c" x="46" y="90" width="172.0" height="8" rx="4" opacity="0"><animate attributeName="width" dur="10s" repeatCount="indefinite" keyTimes="0;0.52;0.92;1" values="172.0;172.0;0;0"/><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.52;0.98" values="0;1;0"/></rect>
+<line class="tick" x1="140.6" x2="140.6" y1="86" y2="102"/>
+<text class="hl" x="140.6" y="116" text-anchor="middle">2.2 s</text>
+<text class="hl" x="46" y="116">0</text><text class="hl" x="218" y="116" text-anchor="end">4 s</text>
+<text class="hb" x="46" y="140">DOOR</text>
+<g opacity="1"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.45" values="1;0;1"/><rect class="closed" x="98" y="126" width="64" height="20" rx="10"/><text class="pt" x="130" y="140" text-anchor="middle">closed</text></g>
+<g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.45" values="0;1;0"/><rect class="open" x="98" y="126" width="64" height="20" rx="10"/><text class="pt" x="130" y="140" text-anchor="middle">OPEN</text></g>
+<rect class="card" x="616" y="20" width="324" height="380" rx="10"/>
+<text class="step" x="632" y="46">CAMERA ABOVE THE DOOR</text>
+<text class="title" x="632" y="72" opacity="1"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.5" values="1;0"/>Stretcher approaching</text>
+<text class="title" x="632" y="72" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.5" values="0;1"/>Supply cart approaching</text>
+<text class="sub" x="632" y="92" opacity="1"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.5" values="1;0"/>the door opens before it arrives</text>
+<text class="sub" x="632" y="92" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.5" values="0;1"/>recognised, not a transport: stays shut</text>
+<rect class="aper" x="708" y="110" width="140" height="106"/>
+<g clip-path="url(#ap)">
+<g><animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.18;0.33;0.45;0.5;1" values="0,0;0,0;-62,0;-62,0;0,0;0,0"/><rect class="closed" x="709" y="110" width="68" height="106"/><rect class="open" x="709" y="110" width="68" height="106" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.5" values="0;1;0"/></rect></g>
+<g><animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" keyTimes="0;0.18;0.33;0.45;0.5;1" values="0,0;0,0;62,0;62,0;0,0;0,0"/><rect class="closed" x="779" y="110" width="68" height="106"/><rect class="open" x="779" y="110" width="68" height="106" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.5" values="0;1;0"/></rect></g>
+</g>
+<rect class="frame" x="707" y="109" width="142" height="108" stroke-width="2"/>
+<line class="ln" x1="660" x2="896" y1="217" y2="217" stroke-width="2"/>
+<text class="no" x="778" y="242" text-anchor="middle" opacity="1"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.5" values="1;0;1"/>closed</text>
+<text class="okt" x="778" y="242" text-anchor="middle" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.18;0.33" values="0;1;0"/>opening, takes 1.5 s</text>
+<text class="okt" x="778" y="242" text-anchor="middle" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.33;0.4" values="0;1;0"/>open, 0.7 s before arrival</text>
+<text class="okt" x="778" y="242" text-anchor="middle" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.4;0.45" values="0;1;0"/>open as it passes</text>
+<text class="no" x="778" y="242" text-anchor="middle" opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.45;0.5" values="0;1;0"/>closing</text>
+<rect class="hud" x="632" y="262" width="292" height="58" rx="8"/>
+<text class="rule" x="646" y="286">Trigger when TTA ≤ 2.2 s</text>
+<text class="sub" x="646" y="306">door_open_time 1.5 s + lead_margin 0.7 s</text>
+<rect class="g" x="632" y="336" width="12" height="12" rx="2"/><text class="sub" x="652" y="346">transport: stretcher, wheelchair, bed</text>
+<rect class="c" x="632" y="356" width="12" height="12" rx="2"/><text class="sub" x="652" y="366">cart: recognised, never opens the door</text>
+<line class="dl" x1="632" x2="646" y1="381" y2="381" style="stroke-dasharray:6 3"/><text class="sub" x="652" y="386">door line, 85% of image height</text>
+</svg>
